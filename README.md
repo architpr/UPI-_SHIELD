@@ -46,13 +46,17 @@ Python 3.8+
 A virtual environment tool (like venv)
 
 Step 1: Clone the Repository
-git clone [https://github.com/YOUR_USERNAME/upi-shield.git](https://github.com/YOUR_USERNAME/upi-shield.git)
+git clone [https://github.com/YOUR_USERNAME/upi-shield.git](https://github.com/architpr/UPI-_SHIELD)
 cd upi-shield
+
+
 
 Step 2: Create and Activate a Virtual Environment
 # For Windows
 python -m venv venv
 .\venv\Scripts\activate
+
+
 
 Step 3: Install Dependencies
 Install all the required libraries from the requirements.txt file.
@@ -60,10 +64,12 @@ Install all the required libraries from the requirements.txt file.
 
 pip install -r requirements.txt
 
+
 Step 4: Train the Model (One-time setup)
 Run the training script to generate the fraud_model.pkl file.
 
 python train_model.py
+
 
 Step 5: Run the Application
 You need to run two servers in two separate terminals.
@@ -80,6 +86,9 @@ streamlit run streamlit_app.py
 
 The web application will open automatically in your browser at http://localhost:8501.
 
+
+
+
 🔗 API Endpoints
 The FastAPI server provides the following endpoints:
 
@@ -95,11 +104,3 @@ Description: Analyzes transaction data and returns a fraud prediction.
 
 Request Body: A JSON object containing 30 features (Time, V1-V28, Amount).
 
-Success Response:
-
-{
-  "prediction": "Not Fraud",
-  "fraud_probability_score": "0.0001"
-}
-
-You can test this endpoint interactively at http://127.0.0.1:8000/docs.
