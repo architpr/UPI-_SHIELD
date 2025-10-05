@@ -52,6 +52,8 @@ cd upi-shield
 
 
 Step 2: Create and Activate a Virtual Environment
+
+
 # For Windows
 python -m venv venv
 .\venv\Scripts\activate
